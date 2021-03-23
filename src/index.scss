@@ -1,0 +1,30 @@
+$darkBlue: #64a1a2;
+$darkGreen: #2c3a3a;
+$lightGrey: #7b8e8e;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+*,*::after, *::before {
+  box-sizing: inherit;
+}
+
+p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 15px;
+}
+img {
+  max-width: 100%;
+}
+ul, li{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+@import './components/Header/header';
+@import './components/JobList/jobList';
