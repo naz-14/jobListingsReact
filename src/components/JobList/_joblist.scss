@@ -1,0 +1,111 @@
+.wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+}
+.job {
+    position: relative;
+    padding: 1.5rem 1.3rem;
+    margin: 4rem 0;
+    border-radius: 10px;
+    border-left: 5px solid $darkBlue;
+    box-shadow: 0px 8px 10px -3px $darkBlue;
+    &.hide {
+        display: none;
+    }
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.job-left-content {
+    min-width: max-content;
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+}
+.job-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    transform: translate(20%,-50%);
+    @media (min-width: 768px) {
+        position: relative;
+        transform: none;
+        margin-right: 2rem;
+    }
+}
+.job-image {
+    width: 4.5rem;
+    height: 4.5rem;
+    @media (min-width: 768px) {
+        width: 100%;
+        height: auto;
+    }
+}
+.job-description {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $lightGrey;
+    @media (min-width: 768px) {
+        border-bottom: none;
+    }
+}
+.job-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $darkBlue;
+    display: inline-block;
+    .pill {
+        display: inline-block;
+        padding: .8rem;
+        border-radius: 20px;
+        margin-left: .5rem;
+        color: white;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .featured {
+        background-color: $darkGreen;
+    }
+    .new {
+        background-color: $darkBlue;
+    }
+}
+.job-position {
+    display: block;
+    margin: 2rem 0;
+    font-size: 1.7rem;
+}
+.job-details {
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .detail {
+        font-size: 1.6rem;
+        color: $lightGrey;
+        margin-right: .5rem;
+    }
+}
+.job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 0 0 0;
+}
+.job-tag {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $darkBlue;
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .3s linear;
+    &:hover {
+        color: white;
+        background-color: $darkBlue;
+    }
+}
