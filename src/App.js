@@ -1,7 +1,6 @@
 import React, { useReducer } from "react"
 import Header from "./components/Header/Header"
 import JobList from "./components/JobList/JobList"
-import TagsBar from "./components/TagsBar/TagsBar"
 import tagsReducer from "./reducers/tagsReducer"
 
 function App() {
@@ -14,11 +13,29 @@ function App() {
     }
     dispatch(action)
   }
+  const handleRemoveTag = (id) => {
+    const action = {
+      type: "remove",
+      payload: id,
+    }
+    dispatch(action)
+  }
+
+  const handleRemoveAllTags = () => {
+    const action = {
+      type: "removeAll",
+      payload: "",
+    }
+    dispatch(action)
+  }
 
   return (
     <div className="App">
-      <Header />
-      <TagsBar tags={tags} />
+      <Header
+        tags={tags}
+        handleRemoveTag={handleRemoveTag}
+        handleRemoveAllTags={handleRemoveAllTags}
+      />
       <JobList handleAddTag={handleAddTag} tags={tags} />
     </div>
   )
