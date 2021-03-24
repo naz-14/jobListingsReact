@@ -1,0 +1,51 @@
+.tags-bar {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid $darkBlue;
+  padding: 1rem;
+  margin-top:13rem;
+}
+.tags-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex: 1 1 60%;
+}
+.tag-wrapper {
+  display: flex;
+  background: $lightBlue;
+  padding: 1rem 4rem 1rem 1rem;
+  align-items: center;
+  position: relative;
+  border-radius: 15px;
+  margin: 1rem .5rem;
+  .tag-in-bar {
+    color: $darkBlue;
+    font-size: 1.5rem;
+  }
+  .remove-tag {
+    position: absolute;
+    right: 0;
+    background: $darkBlue;
+    color: white;
+    border: none;
+    height: 100%;
+    border-radius: 0 15px 15px 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+.clearAllContainer {
+  min-width: max-content;
+}
+.clear-all {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: $darkBlue;
+  cursor: pointer;
+}
+
