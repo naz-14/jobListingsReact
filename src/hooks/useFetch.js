@@ -8,15 +8,13 @@ const useFetch = (url) => {
     error: null,
   })
   useEffect(() => {
-    setTimeout(() => {
-      getData(url).then((data) => {
-        setState({
-          loading: false,
-          data,
-          error: null,
-        })
+    getData(url).then((data) => {
+      setState({
+        loading: false,
+        data,
+        error: null,
       })
-    }, 2000)
+    })
   }, [url])
   return state
 }
