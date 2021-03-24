@@ -1,3 +1,4 @@
+$lightBlue: #cae9eb;
 $darkBlue: #64a1a2;
 $darkGreen: #2c3a3a;
 $lightGrey: #7b8e8e;
@@ -28,3 +29,4 @@ a {
 
 @import './components/Header/header';
 @import './components/JobList/jobList';
+@import './components/TagsBar/tagsBar';
