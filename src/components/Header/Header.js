@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react"
+import PropTypes from "prop-types"
+import TagsBar from "../TagsBar/TagsBar"
 
-const Header = () => {
+const Header = ({ tags, handleRemoveTag, handleRemoveAllTags }) => {
   const mediaMatch = window.matchMedia("(min-width:768px)")
   const [matches, setMatches] = useState(mediaMatch.matches)
 
@@ -23,9 +25,24 @@ const Header = () => {
   }
   return (
     <>
-      <header className="site-header" style={style.container(matches)} />
+      <div className="bg-header" style={style.container(matches)} />
+      <header className="site-header">
+        {tags.length !== 0 ? (
+          <TagsBar
+            tags={tags}
+            handleRemoveTag={handleRemoveTag}
+            handleRemoveAllTags={handleRemoveAllTags}
+          />
+        ) : (
+          ""
+        )}
+      </header>
     </>
   )
 }
-
+Header.propTypes = {
+  handleRemoveTag: PropTypes.func.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleRemoveAllTags: PropTypes.func.isRequired,
+}
 export default Header
